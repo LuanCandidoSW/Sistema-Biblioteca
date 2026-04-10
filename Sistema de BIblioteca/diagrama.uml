@@ -1,0 +1,47 @@
+# 📌 Diagrama de Classes (Visual)
+
+```mermaid
+classDiagram
+Usuario <|-- Aluno
+Usuario <|-- Professor
+Usuario <|-- Bibliotecario
+
+class Usuario {
+  id
+  nome
+  email
+  autenticar()
+}
+
+class Aluno {
+  matricula
+  reservar()
+  emprestar()
+}
+
+class Professor {
+  departamento
+  reservar()
+  emprestar()
+}
+
+class Bibliotecario {
+  registro
+  cadastrarLivro()
+}
+
+class Livro {
+  titulo
+  autor
+  disponivel
+}
+
+class Emprestimo {
+  dataEmprestimo
+  dataDevolucao
+}
+
+class Multa {
+  valor
+  paga
+}
